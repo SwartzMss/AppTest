@@ -1,0 +1,15 @@
+TARGET = GetInfo.exe
+CXXFLAGS = -g -fPIC -I../depend
+LDFLAGS =  -L../depend/log4Cplus -llog4cplus -lpthread
+OBJS = GetInfo.o MyLogger.o
+
+all:$(TARGET)
+	
+$(TARGET): $(OBJS)
+	$(CXX) $^  $(LDFLAGS) -o $@ 
+	
+%.o : %.cpp
+	$(CXX) -c  $(CXXFLAGS) $< -o $@
+	
+clean:
+	@rm -rvf $(OBJS) $(TARGET)

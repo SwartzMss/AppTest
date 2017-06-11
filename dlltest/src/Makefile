@@ -1,5 +1,3 @@
-CXX  = g++
-
 CXXFLAGS = -g -fPIC 
 LDFLAGS =  -ldl
 CPPFLAGS = -I../dll

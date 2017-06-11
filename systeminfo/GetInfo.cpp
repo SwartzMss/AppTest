@@ -4,12 +4,14 @@
 #include <unistd.h>
 #include <sys/time.h>
 #include <string.h>
+#include "MyLogger.h"
 
 #define KB 1024.0			// 2^10
 #define MB 1048576.0		// 2^20 
 #define GB 1073741824.0     // 2^30 
 
 #define VMSIZE_LINE 13
+MyLogger * pMyLogger = NULL;
 
 //获取进程占用虚拟内存
 unsigned int get_proc_virtualmem(unsigned int pid)
@@ -65,6 +67,8 @@ void GetDiskUsage(const char* pDir)
 
 int main(void)
 {
+	pMyLogger = MyLogger::getInstance();
+	DEBUG_LOG("main");
 	char *pbuf = new char[1024*1024*10];
 	memset(pbuf,0,1024*1024*10);
 	GetDiskUsage("/home");
