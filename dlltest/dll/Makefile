@@ -1,4 +1,4 @@
-CXXFLAGS = -g -fPIC 
+CXXFLAGS = -g -fPIC -fvisibility=hidden
 LDFLAGS = -shared -lpthread 
 
 TARGETSO = ../src/libdlltest.so

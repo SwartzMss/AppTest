@@ -665,7 +665,7 @@ int BIO_gets(BIO *bp, char *buf, int size);
 int BIO_write(BIO *b, const void *data, int len);
 int BIO_puts(BIO *bp, const char *buf);
 int BIO_indent(BIO *b, int indent, int max);
-long BIO_ctrl(BIO *bp, int cmd, long larg, void *parg);
+long BIO_ctrl(BIO *bp, int cmd, long larg, const void *parg);
 long BIO_callback_ctrl(BIO *b, int cmd,
                        void (*fp) (struct bio_st *, int, const char *, int,
                                    long, long));
