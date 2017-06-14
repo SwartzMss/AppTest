@@ -1,6 +1,6 @@
 TARGET = RSATest.exe
 CXXFLAGS =  -I../depend
-LDFLAGS =  -L../depend/openssl -lsqlite3 -lssl -lcrypto -ldl
+LDFLAGS =  -L../depend/openssl -lssl -lcrypto -ldl
 OBJS = main.o RSATest.o 
 
 all:$(TARGET)
