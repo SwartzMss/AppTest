@@ -1,1 +1,8 @@
-valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=MemDebug.log ./a.out 
+valgrind --leak-check=full --show-leak-kinds=all  --track-fds=yes --track-origins=yes --undef-value-errors=yes --log-file=MemDebug.log ./a.out 
+
+--show-leak-kinds=all 指定泄漏检查中显示的泄漏种类
+--leak-check=full 如果设置为full或者yes，每个单独的泄漏将被详细显示和/或计数为错误
+--track-origins=yes  控制Memcheck是否跟踪未初始化值的来源
+--log-file=MemDebug.log 指定输出的文件
+--track-fds=yes 查看是否有资源泄漏
+--undef-value-errors=yes 控制Memcheck报告是否使用未定义的值错误
