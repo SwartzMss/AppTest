@@ -1,5 +1,5 @@
 TARGET = LogApp.exe
-CXXFLAGS = -g -fPIC -I../depend
+CXXFLAGS = -g -fPIC -I../depend/log4cplus/include
 LDFLAGS =  -L../depend/log4cplus/lib -llog4cplus -lpthread
 OBJS = main.o MyLogger.o
 
