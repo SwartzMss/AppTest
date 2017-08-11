@@ -1,11 +1,11 @@
 #pragma once
 #include<iostream>
 #include<string>
-#include <logger.h>
-#include <configurator.h>
-#include <layout.h>
-#include <loggingmacros.h>
-#include <helpers/stringhelper.h>
+#include <log4cplus/logger.h>
+#include <log4cplus/configurator.h>
+#include <log4cplus/layout.h>
+#include <log4cplus/loggingmacros.h>
+#include <log4cplus/helpers/stringhelper.h>
 
 #define MY_LOG_FILE "./logconfig.properities"
 
